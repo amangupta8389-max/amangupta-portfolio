@@ -81,6 +81,10 @@ body {
     color: var(--accent);
 }
 
+:root[data-theme="dark"] .logo a {
+    color: #ffffff;
+}
+
 /* NAV LINKS */
 .nav-links {
     display: flex;
@@ -198,7 +202,7 @@ body {
     }
 
     .logo {
-        font-size: 20px;
+        font-size: 26px;
     }
 
     .nav-links {
@@ -255,7 +259,7 @@ body {
     }
 
     .logo {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .hamburger span {
