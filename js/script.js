@@ -60,6 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("open"); // matches CSS
       navLinks.classList.toggle("active"); // matches CSS
+
+      // Lock/unlock scroll
+      if (navLinks.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
     });
 
     // Close menu when clicking a link
@@ -67,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("open");
         navLinks.classList.remove("active");
+        document.body.style.overflow = "auto"; // Unlock scroll
       });
     });
   }
